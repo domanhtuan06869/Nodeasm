@@ -26,12 +26,6 @@ router.get('/',ensureAuthenticated,(req,res)=>{
   })
 
 
-
-
-req.flash(
-  'success',
-  '')
-
 })
 router.get('/mobile',function(req,res){
  
@@ -82,8 +76,12 @@ const Prd=new Product({_id:req.query.id});
 })
 router.get('/edit',function(req,res){
 
- const {id,name,category,price,urlimage,description}=req.query;
-      res.render('examples/productedit',{user:'email',id:id,name:name,category,price:price,urlimage:urlimage,description:description})
+ const {id}=req.query;
+ Product.findOne({_id:id}).then(docs=>{
+  res.render('examples/productedit',{user:req.user.email,item:docs,active:'activeb'})
+
+})
+   
   })
   router.get('/editproduct',function(req,res){
 

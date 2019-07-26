@@ -131,31 +131,31 @@ gfbfdbd
           
                       <tr>
                         <td>
-                           <input  form="edit_form" type="text" value="<%=id%>" name="id" hidden> 
-                        <input  form="edit_form" value="<%=name%>"  style="width: 150px;" type="text"  name="name">
+                           <input  form="edit_form" type="text" value="<%=item.id%>" name="id" hidden> 
+                        <input  form="edit_form" value="<%=item.name%>"  style="width: 150px;" type="text"  name="name">
                    
                         </td>
                         <td>
-                            <input  form="edit_form" value="<%=category%>" style="width: 150px;" type="text" name="category">
+                            <input  form="edit_form" value="<%=item.category%>" style="width: 150px;" type="text" name="category">
                         
                         </td>
                         <td>
-                            <input  form="edit_form" value="<%=price%>" style="width: 150px;" type="text" name="price">
+                            <input  form="edit_form" value="<%=item.price%>" style="width: 150px;" type="text" name="price">
                         
                             
                         </td>
                         <td >
                          
-                            <input  form="edit_form" value="<%=urlimage%>" style="width: 150px;" type="text"  name="urlimage">
+                            <input  form="edit_form" value="<%=item.urlimage%>" style="width: 150px;" type="text"  name="urlimage">
                   
                         </td>
                         <td>
                          
-                          <input form="edit_form" value="<%=description%>" style="width: 150px;" type="text" name="description">
+                          <input form="edit_form" value="<%=item.description%>" style="width: 150px;" type="text" name="description">
                         </td>
                         <td >
                           <form id="edit_form" action="editproduct" method="GET">
-                          <button type="submit"  class="btn btn-info p-2"><i class="fas fa-edit"></i></button>
+                          <button type="submit"  class="btn btn-info p-2"><i class="fas fa-save"></i></button>
                           </form>
                         </td>
                       </tr>
