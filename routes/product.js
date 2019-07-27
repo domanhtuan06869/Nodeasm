@@ -3,6 +3,8 @@ const router = express.Router();
 const Product = new require('../models/product');
 const { ensureAuthenticated, forwardAuthenticated} = require('../config/auth');
 const Userlogin = new require('../models/userlogin');
+const Slide = new require('../models/slide');
+
 
 
 
@@ -40,7 +42,12 @@ router.get('/mobile/search',function(req,res){
     console.log(docs)
   res.send(docs)
   })
-
+})
+router.get('/mobile/slide',function(req,res){
+  Slide.find({}).then(docs=>{
+    console.log(docs)
+  res.send(docs)
+  })
 })
 router.post("/",function(req,res){
     console.log(req.body.name);
@@ -101,14 +108,6 @@ router.get('/edit',function(req,res){
     })
     .catch(err => {
     console.error(err)
-    })
-
-
-     })
-   router.get('/search',function(req,res){
-    Product.find({name:'vcdbcx'}).then(docs=>{
-      console.log(docs)
-      res.redirect('/product?array='+docs)
     })
  
   })
