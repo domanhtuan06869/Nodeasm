@@ -17,7 +17,7 @@ router.get('/',ensureAuthenticated,(req,res)=>{
       if(req.query.search != undefined){
         search = {name: {'$regex':req.query.search}}
       }
-      
+      console.log(search)
       Product.find(search).then(docs=>{
         res.render('examples/product',{user:req.user.email,item:docs,active:'activeb'})
       })

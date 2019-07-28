@@ -136,7 +136,7 @@
                         <td class="text-right">
                          
                             <form action="usermanager/edituser?email=<%=users.email%>&id=<%=users._id%>" id="mform" method="POST">
-                              <input style="width: 30px;" type="number" minlength="0" maxlength="2" value="0" name="roleedit">
+                              <input style="width: 30px;" type="number" minlength="0" maxlength="2" value="<%=users.__v%>" name="roleedit">
                               <button type="submit"  class="btn btn-primary" >Sửa quyền</button>
                               
                             </form>
