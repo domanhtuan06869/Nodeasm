@@ -46,7 +46,7 @@ router.get('/mobile/search',function(req,res){
 })
 router.get('/mobile/search/nameproduct',function(req,res){
   var name=(req.query.name)
-  Product.find({name: {'$regex':''}}).then(docs=>{
+  Product.find({name: {'$regex':name}}).then(docs=>{
     console.log(docs)
   res.send(docs)
   })
