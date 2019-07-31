@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Bills = new require('../models/BillUser');
 
-
+//push value bill from mobile to database
 router.post("/",function(req,res){
     console.log(req.body.name);
    
@@ -18,8 +18,11 @@ router.post("/",function(req,res){
 
 res.send('')
 })
+
+//get value bill
 router.get('/detail',function(req,res){
-    Bills.findOne({email:'t@gmaill.com'}).then((docs)=>{
+    var email=req.query.email;
+    Bills.findOne({email:email}).then((docs)=>{
         console.log(docs)
 res.send(docs)
     })
