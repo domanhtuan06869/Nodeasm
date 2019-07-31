@@ -22,7 +22,7 @@ res.send('')
 //get value bill
 router.get('/detail',function(req,res){
     var email=req.query.email;
-    Bills.findOne({email:email}).then((docs)=>{
+    Bills.find({email:email}).then((docs)=>{
         console.log(docs)
 res.send(docs)
     })
