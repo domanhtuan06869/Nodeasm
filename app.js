@@ -54,7 +54,7 @@ app.use(function(req, res, next) {
   res.locals.error = req.flash('error');
   next();
 });
-app.use(express.static('views'))
+  
 // Routes
 app.use('/', require('./routes/index.js'));
 app.use('/users', require('./routes/users.js'));
@@ -62,6 +62,7 @@ app.use('/add', require('./routes/add.js'));
 app.use('/login', require('./routes/loginClient.js'));
 app.use('/usermanager', require('./routes/usermanager'));
 app.use('/product', require('./routes/product'));
+app.use('/bill',require('./routes/bill'))
 
 const PORT = process.env.PORT || 5000;
 
