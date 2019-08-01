@@ -31,6 +31,9 @@ const BillSchema = new mongoose.Schema({
   },
   datebuy:{
       type:String
+  },
+  url:{
+    type:String
   }
 });
 

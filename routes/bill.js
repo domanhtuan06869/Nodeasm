@@ -6,10 +6,10 @@ const Bills = new require('../models/BillUser');
 router.post("/",function(req,res){
     console.log(req.body.name);
    
-    const {nameproduct,sumprice,color,fullname,email,numberphone,address,status,payment,datebuy}=req.body
+    const {nameproduct,sumprice,color,fullname,email,numberphone,address,status,payment,datebuy,url}=req.body
 
 
-    const  Bill =new Bills({nameproduct:nameproduct,sumprice:sumprice,color:color,fullname:fullname,email:email,numberphone:numberphone,address:address,status:status,payment:payment,datebuy:datebuy})
+    const  Bill =new Bills({nameproduct:nameproduct,sumprice:sumprice,color:color,fullname:fullname,email:email,numberphone:numberphone,address:address,status:status,payment:payment,datebuy:datebuy,url:url})
  
   Bill.save(function(err){
        console.log(Bill)
