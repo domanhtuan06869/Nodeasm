@@ -42,7 +42,7 @@ app.use(
 // Passport middleware
 app.use(passport.initialize());
 app.use(passport.session());
-
+app.use(express.static('views'))
 // Connect flash
 app.use(flash());
 

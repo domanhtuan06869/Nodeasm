@@ -69,7 +69,7 @@ router.post("/",function(req,res){
     const  Prd =new Product({name:name,category:category,price:price,urlimage:urlimage,description:description})
  
   Prd.save(function(err){
-console.log(Prd)
+       console.log(Prd)
 
   })
   req.flash(
@@ -118,6 +118,12 @@ router.get('/edit',function(req,res){
     .catch(err => {
     console.error(err)
     })
+
+
+
+    
+
+
  
   })
   router.get('/logout', (req, res) => {
