@@ -2,7 +2,8 @@
 
 
 $ npm install
-file ket noi mongose trong config/key.js
+
+$ file ket noi mongose trong config/key.js
 
 
 $ npm start
