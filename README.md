@@ -1,8 +1,8 @@
-# Node.js 
+# node js assignment
 
 
 $ npm install
-```
+file ket noi mongose trong config/key.js
 
 
 $ npm start
