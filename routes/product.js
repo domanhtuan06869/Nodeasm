@@ -39,7 +39,7 @@ res.send(docs)
 })
 router.get('/mobile/search',function(req,res){
   var category=(req.query.category)
-  Product.find({category: {'$regex':category}}).then(docs=>{
+  Product.find({category: category}).then(docs=>{
     console.log(category)
   res.send(docs)
   })
