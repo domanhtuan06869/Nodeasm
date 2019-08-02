@@ -30,11 +30,11 @@ res.send(docs)
 
 //delete bill
 router.get('/delete',function(req,res){
-    const Bill=new Bills({id:req.query.id});
+    const Bill=new Bills({_id:req.query.id});
          Bill.remove();
          console.log(Bill)
      
       
-         res.redirect('/product')
+         res.send(Bill)
     })
 module.exports = router;
