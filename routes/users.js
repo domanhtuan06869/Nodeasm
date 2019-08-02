@@ -22,15 +22,15 @@ router.post('/register', (req, res) => {
   let errors = [];
 
   if (!name || !email || !password || !password2) {
-    errors.push({ msg: 'Please enter all fields' });
+    errors.push({ msg: 'Vui lòng nhập vào các trường' });
   }
 
   if (password != password2) {
-    errors.push({ msg: 'Passwords do not match' });
+    errors.push({ msg: 'Mật khẩu chưa khớp' });
   }
 
   if (password.length < 6) {
-    errors.push({ msg: 'Password must be at least 6 characters' });
+    errors.push({ msg: 'Mật khẩu phải lớn hơn 6 kí tự' });
   
   }
   if (errors.length > 0) {
@@ -44,7 +44,7 @@ router.post('/register', (req, res) => {
   } else {
     User.findOne({ email: email }).then(user => {
       if (user) {
-        errors.push({ msg: 'Email already exists' });
+        errors.push({ msg: 'Email đã tồn tại' });
         res.render('register', {
           errors,
           name,
@@ -68,7 +68,7 @@ router.post('/register', (req, res) => {
               .then(user => {
                 req.flash(
                   'success_msg',
-                  'You are now registered and can log in'
+                  'Đăng kí thành công bạn có thể đăng nhập ngay'
                 );
                res.redirect('/users/login');
              
@@ -94,7 +94,7 @@ router.post('/login', (req, res, next) => {
 // Logout
 router.get('/logout', (req, res) => {
   req.logout();
-  req.flash('success_msg', 'You are logged out');
+  req.flash('success_msg', 'Đăng xuất thành công');
   res.redirect('/users/login');
 });
 

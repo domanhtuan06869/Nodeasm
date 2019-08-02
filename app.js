@@ -59,7 +59,6 @@ app.use(function(req, res, next) {
 app.use('/', require('./routes/index.js'));
 app.use('/users', require('./routes/users.js'));
 app.use('/add', require('./routes/add.js'));
-app.use('/login', require('./routes/loginClient.js'));
 app.use('/usermanager', require('./routes/usermanager'));
 app.use('/product', require('./routes/product'));
 app.use('/bill',require('./routes/bill'))

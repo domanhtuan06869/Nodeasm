@@ -22,7 +22,7 @@ router.get('/',ensureAuthenticated , (req, res) =>{
 
 
   }else{
-    res.send('<H1> Bạn không có quyền truy cập </H1>')
+    res.render('examples/lookscreen')
   }
   })
 
