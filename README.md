@@ -1,14 +1,13 @@
 # Node.js 
 
-```sh
+
 $ npm install
 ```
 
-```sh
+
 $ npm start
 
 
-# Visit http://localhost:5000
-### MongoDB
+ http://localhost:5000
 
-Open "config/keys.js" and add your MongoDB URI, local or Atlas
+web: https://tuan-nodejs.herokuapp.com/
